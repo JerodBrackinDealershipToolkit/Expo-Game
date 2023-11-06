@@ -1,0 +1,360 @@
+body {
+  line-height: 0.5 !important;
+  white-space: nowrap;
+}
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
+}
+
+.App .Branding {
+    width: 70vw;
+    max-width: 900px;
+    height: auto;
+    background-color: var(--secondary);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-left: 8px solid var(--secondary-darker);
+}
+
+.App .Branding img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.App .App-Container {
+    max-width: 1200px;
+    max-height: 90vh;
+    width: 100vw;
+
+    background-color: var(--secondary);
+    border-radius: 30px;
+    border-left: 8px solid var(--secondary-darker);
+    border-bottom: 10px solid var(--secondary-darker);
+    box-shadow: 8px 8px 16px 0 rgba(0,0,0,.2);
+
+    position: relative;
+}
+
+.App .App-Container .SlotLever {
+    position: absolute;
+    right: calc(-7vw + 1px);
+    top: 0;
+    height: 100%;
+    width: 7vw;
+}
+
+.App .App-Container .SlotLever img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.App .App-Container .Header {
+    display: flex;
+    position: relative;
+    gap: 10px;
+    height: auto;
+    padding: 20px;
+    align-items: center;
+}
+
+.App .App-Container .Header #logo {
+    width: 140px;
+    height: auto; 
+}
+
+.App .App-Container .Header #logo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.App .App-Container .Header .GameMenu {
+    flex: 0;
+    background: white;
+    border-radius: 30px;
+    border-left: 5px solid var(--primary);
+    border-bottom: 7px solid var(--primary);
+    box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2);
+    transition: all 2s ease; 
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App .App-Container .Header .GameMenu.active {
+    flex: 1;
+}
+
+.App .App-Container .Header .GameMenu #start {
+    font-size: 2em;
+    border-radius: 30px;
+    background-color: var(--primary);
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+    border-left: 5px solid var(--secondary);
+    border-bottom: 7px solid var(--secondary);
+    cursor: pointer;
+}
+
+.App .App-Container .Header .GameMenu #start:hover {
+    border-left: 1px solid var(--secondary);
+    border-bottom: 3px solid var(--secondary);
+}
+
+.App .App-Container .Header .GameMenu #actions {
+    opacity: 0.1;
+    transition: all 2s ease; 
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.App .App-Container .Header .GameMenu #actions.active {
+    opacity: 1;
+}
+
+.App .App-Container .Header .GameMenu #actions .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: all 2s ease; 
+}
+
+.App .App-Container .Header .GameMenu #actions .action img {
+    width: 100px;
+}
+
+.App .App-Container .Header .GameMenu #actions .action h2 {
+    line-height: 3em;
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+.App .NumberInput {
+    display: flex;
+    gap: 5px;
+}
+
+.App .NumberInput input {
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+    width: 2em;
+    text-align: center;
+    border-radius: 30px;
+    overflow: hidden;
+    border-top: 1px solid var(--secondary);
+    border-right: 1px solid var(--secondary);
+    border-left: 5px solid var(--secondary);
+    border-bottom: 7px solid var(--secondary);
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+}
+
+.App .NumberInput .Control {
+    display: flex;
+    flex-direction: column;
+    width: 2em;
+    justify-content: space-between;
+}
+
+.App .NumberInput .Control svg {
+    color: white;
+    background: var(--primary);
+    border-top: 1px solid var(--secondary);
+    border-right: 1px solid var(--secondary);
+    border-left: 5px solid var(--secondary);
+    border-bottom: 7px solid var(--secondary);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.App .Roller {
+    width: 7em;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 8px 8px 16px 0 rgba(0,0,0,.2);
+}
+  
+.App .Roller .RollerInner {
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid var(--secondary-darker);
+    border-right: 10px solid var(--secondary-lighter);
+    border-left: 10px solid var(--secondary-lighter);
+    border-bottom: 10px solid var(--secondary-lighter);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.App .Roller .RollerInner span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+    font-size: 3em;
+    font-family: 'Digital-7', 'Segment7', monospace;
+    width: 100%;
+    height: 100%;
+    border-top: 6px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 6px solid black;
+    background: linear-gradient(180deg, var(--secondary-lighter) 0%, var(--primary) 20%, #ffffff 50%, var(--primary) 90%, var(--secondary-lighter) 100%); 
+    color: white;
+    text-shadow: 
+        0px 0px 6px rgba(22, 59, 114, 0.6);
+    border-radius: 5px;
+}
+
+.App .App-Container .Navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.App .App-Container .Navigation .LevelLight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+    background: white;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, white 0%, white 30%, black 100%);
+    border: 3px solid black;
+    color: black;
+    font-size: 2vw;
+    cursor: pointer;
+    text-shadow: 
+        0px 0px 6px rgba(22, 59, 114, 0.6);
+}
+
+.App .App-Container .Navigation .LevelLight.active {
+    background: radial-gradient(circle at center, var(--primary) 0%, var(--primary) 30%, black 100%) !important;
+    box-shadow: 0 0 20px 0px var(--primary);
+    border: 1px solid rgb(39, 33, 0);
+    color: white;
+}
+
+.App .App-Container .Navigation .LevelLight.disabled {
+    background: radial-gradient(circle at center, gray 0%, gray 30%, black 100%);
+    border: 1px solid rgb(39, 33, 0);
+    color: white;
+}
+
+.App .App-Container .Navigation .LittleLight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1vw;
+    height: 1vw;
+    background: white;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, white 0%, white 30%, black 100%);
+    border: 3px solid black;
+}
+
+.App .App-Container .Navigation .LittleLight.active {
+    background: radial-gradient(circle at center, var(--primary) 0%, var(--primary) 50%, black 100%);
+    box-shadow: 0 0 20px 0px var(--primary);
+    border: 3px solid rgb(39, 33, 0);
+}
+
+.App .App-Container .Game {
+    background: white;
+    /* background-image: url('./assets/FutureCityWide.jpg'); */
+    border-radius: 30px;
+    border-left: 5px solid var(--primary);
+    border-bottom: 7px solid var(--primary);
+    box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2);
+    transition: all 2s ease; 
+    padding: 10px;
+    margin: 20px;
+
+    height: 22em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App span, h2, img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.background-container {
+    background-image: url('./assets/FutureCityWide.jpg');
+    background-size: cover; /* Adjust the background size as needed */
+    background-position: center; /* Adjust the background position as needed */
+    background-repeat: no-repeat;
+    /* Add any additional styles you want for the container */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  grid-gap: 20px; /* Adjust the gap between Levels as needed */
+  background-color: var(--primary); /* Set the background color for neon blue */
+  padding: 20px; /* Add padding for spacing around the grid */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for individual Levels within the grid
+.level {
+  background-color: var(--secondary-lighter); 
+  padding: 20px; 
+  border-radius: 5px;
+} */
+
+:is(.music-controller, .level-buttons) svg {
+  color: white;
+  background: var(--primary);
+  border-top: 1px solid var(--secondary);
+  border-right: 1px solid var(--secondary);
+  border-left: 5px solid var(--secondary-darker);
+  border-bottom: 7px solid var(--secondary-darker);
+  border-radius: 30px;
+  margin-inline: 0.25ch;
+  padding-inline: 0.5ch;
+  cursor: pointer;
+  font-size: 1.25em;
+}
+
+.music-controller svg {
+  width: 1ch;
+  height: 1em;
+}
+
+.roller-container {
+  justify-content: center !important;
+}

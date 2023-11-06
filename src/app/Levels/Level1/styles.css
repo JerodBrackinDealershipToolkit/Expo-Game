@@ -1,0 +1,35 @@
+.numberInput {
+  padding: 20px;
+}
+
+.table-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the table */
+table {
+  margin: 10px 0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style table rows */
+table tr:nth-child(even) {
+  background-color: var(--primary);
+  color: var(--secondary-lighter);
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--secondary-lighter);
+  color: var(--tertiary);
+}
+
+/* Style table cells (td) */
+table td {
+  padding: 10px;
+  border: 1px solid var(--secondary-darker);
+ 
+}
+

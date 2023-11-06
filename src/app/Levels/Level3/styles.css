@@ -1,0 +1,18 @@
+/* .sales-counter {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+  } 
+  
+  .sales-number {
+   animation: countUp 2s linear;
+  }
+  
+  @keyframes countUp {
+    from {
+      content: "1"; 
+    }
+    to {
+      content: "10"; 
+    }
+  } */

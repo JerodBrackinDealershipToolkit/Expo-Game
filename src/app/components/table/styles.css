@@ -1,0 +1,23 @@
+
+table {
+    width: 100%; 
+    min-height: 20vh;
+    border-collapse: collapse;
+    white-space: wrap;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 8px;
+    line-height: 1em;
+}
+
+thead th {
+    vertical-align: middle;
+}
+
+tbody td {
+    vertical-align: middle;
+}
+  
